@@ -206,7 +206,7 @@ We welcome contributions to improve the Android Monitoring System! Here's how yo
 - Install Termux API app for location features
 
 **Data Not Updating:**
-- Check network connectivity
+- Check network connectivity both client and server on the same network
 - Verify the client script is running continuously
 - Look for error messages in the terminal output
 
@@ -220,8 +220,8 @@ We welcome contributions to improve the Android Monitoring System! Here's how yo
 ## Contact
 
 **Developer**: Nikhil Tiwari
-**Email**: your.email@example.com
-**GitHub**: [@yourusername](https://github.com/yourusername)
+**Email**: nikhil2121tiwari@gmail.com
+**GitHub**: [@CoderNikkcoder](https://github.com/CoderNikkcoder)
 
 ---
 
