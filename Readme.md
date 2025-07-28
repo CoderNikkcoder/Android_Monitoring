@@ -57,8 +57,8 @@ The system enables administrators to monitor multiple Android devices from a cen
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/android-monitoring-system.git
-cd android-monitoring-system
+git clone https://github.com/CoderNikkcoder/Android_Monitoring.git
+cd Android-monitoring
 ```
 
 2. Create a virtual environment:
@@ -73,9 +73,9 @@ pip install flask requests
 ```
 
 4. Configure WhatsApp alerts:
-   - Set up WhatsApp Business API credentials
-   - Update the configuration file with your API keys
-   - Configure alert thresholds in the settings
+   - Ensure WhatsApp Web is logged in on the server machine
+   - Update phone numbers in the configuration file
+   - Set alert thresholds in the settings
 
 5. Start the server:
 ```bash
@@ -144,21 +144,11 @@ android-monitoring-system/
 │
 ├── app.py                 # Main Flask application
 ├── client.py             # Android client agent
-├── whatsapp_alerts.py    # WhatsApp notification handler
-├── config.py             # Configuration settings
 ├── templates/            # HTML templates
 │   ├── base.html        # Base template
 │   ├── index.html       # Homepage template
 │   ├── logs.html        # Logs viewer template
 │   └── devices.html     # Device list template
-├── static/              # CSS, JS, and image files
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── images/
-├── data/                # Log files and collected data
-├── logs/                # Application logs
 └── screenshots/         # Documentation images
 ```
 
@@ -171,8 +161,9 @@ android-monitoring-system/
 - Alert thresholds: Configurable in `config.py`
 
 ### WhatsApp Configuration
-- Add your WhatsApp Business API credentials to `config.py`
-- Set recipient phone numbers for alerts
+- Ensure WhatsApp Web is logged in on the server machine before running
+- Add recipient phone numbers to config.py (format: "+91xxxxxxxxxx")
+- PyWhatKit will automatically open WhatsApp Web to send messages
 - Configure message templates for different alert types
 
 ### Client Configuration
@@ -220,10 +211,11 @@ We welcome contributions to improve the Android Monitoring System! Here's how yo
 - Look for error messages in the terminal output
 
 **WhatsApp Alerts Not Working:**
-- Verify API credentials in config.py
-- Check internet connection on server
-- Ensure recipient numbers are in correct format (+91xxxxxxxxxx)
-- Review WhatsApp Business API rate limits
+- Ensure WhatsApp Web is logged in on the server machine
+- Check if browser (Chrome/Firefox) is installed and accessible
+- Verify recipient numbers are in correct format (+91xxxxxxxxxx)
+- Make sure the server machine has GUI access (not headless)
+- PyWhatKit requires a few seconds delay between messages
 
 ## Contact
 
